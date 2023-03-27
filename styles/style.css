@@ -1,0 +1,225 @@
+@import url("https://use.typekit.net/jzy6juq.css");
+body {
+  background: #f0f2f5;
+  margin: 0;
+  user-select: none;
+}
+header {
+  position: absolute;
+  width: 100%;
+  height: 4rem;
+  background: #fff;
+  box-shadow: 0 0.063rem 0.125rem rgba(0, 0, 0, 0.2) !important;
+}
+a {
+  text-decoration: none;
+  color: blue;
+}
+a:hover {
+  text-decoration: underline;
+}
+#title {
+  display: inline;
+  font-family: muli, sans-serif;
+  color: #000;
+  font-weight: 400;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: calc((100% - 70rem) / 2);
+}
+
+#githubIcon {
+  display: inline-block;
+  background-image: url("../images/githubLogo.png");
+  height: 0.75rem;
+  width: 0.75rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 0.3rem;
+}
+
+#buttonToRepo {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #fff;
+  background-color: #dc3545;
+  font-size: 0.813rem;
+  width: 15rem;
+  padding: 0.7rem 1rem;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  font-family: muli, sans-serif;
+  border-radius: 0.3rem;
+  right: calc((100% - 70rem) / 2);
+}
+
+#buttonToRepo:hover {
+  background-color: #c82333;
+}
+
+#container {
+  position: fixed;
+  display: block;
+  width: 70rem;
+  height: 44.063rem;
+  left: calc((100% - 70rem) / 2);
+  top: 8rem;
+}
+
+#aboutMe {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.2rem;
+  font-family: muli, sans-serif;
+  font-size: 0.75rem;
+}
+
+#projectTitle {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: muli, sans-serif;
+  font-size: 0.75rem;
+}
+
+#topProject {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.2rem;
+  font-family: muli, sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.3rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+  background: #fff;
+  box-shadow: 0 0.063rem 0.125rem rgba(0, 0, 0, 0.2) !important;
+  text-align: center;
+}
+
+#copyrightStatement {
+  font-family: muli, sans-serif;
+  font-size: 0.875rem;
+  color: #b5b6ba;
+  font-weight: 400;
+  margin: 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 75rem) {
+  #container {
+    width: 93.7%;
+    left: calc((100% - 93.7%) / 2);
+  }
+  #title {
+    left: calc((100% - 93.7%) / 2);
+  }
+  #buttonToRepo {
+    right: calc((100% - 93.7%) / 2);
+  }
+}
+@media only screen and (max-width: 47.938rem) {
+  #buttonToRepo {
+    width: 0.8rem;
+  }
+  #githubTitle {
+    display: none;
+  }
+}
+@media only screen and (max-width: 32rem) {
+  #copyrightStatement {
+    font-size: 0.73rem;
+  }
+  #showAll {
+    display: none;
+  }
+}
+@media only screen and (max-width: 29.313rem) {
+  #howToReach {
+    display: none;
+  }
+}
+@media only screen and (max-width: 26.188rem) {
+  #copyrightStatement {
+    font-size: 0.64rem;
+  }
+}
+@media only screen and (max-width: 24.625rem) {
+  #aboutMe {
+    font-size: 0.7rem;
+  }
+  #projectTitle {
+    font-size: 0.7rem;
+  }
+  #topProject {
+    font-size: 0.57rem;
+  }
+}
+@media only screen and (max-width: 23.313rem) {
+  #aboutMe {
+    font-size: 0.57rem;
+  }
+  #projectTitle {
+    font-size: 0.57rem;
+  }
+  #topProject {
+    font-size: 0.57rem;
+  }
+  #copyrightStatement {
+    font-size: 0.55rem;
+  }
+}
+/*
+
+Muli Italic:
+
+    font-family: muli, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+
+
+Muli Regular:
+
+    font-family: muli, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+Muli Bold Italic:
+
+    font-family: muli, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+
+
+Muli Bold:
+
+    font-family: muli, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    
+*/
