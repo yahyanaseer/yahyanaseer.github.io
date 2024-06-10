@@ -23,7 +23,7 @@
         .content {
             flex-grow: 3;
         }
-        iframe, object {
+        iframe {
             width: 100%;
             height: 100%;
             border: none;
@@ -87,21 +87,12 @@
             link.addEventListener('click', function(event) {
                 const contentFrame = document.getElementById('content-frame');
                 const href = this.getAttribute('href');
-                const existingObject = document.querySelector('object');
-
-                if (existingObject) {
-                    existingObject.remove();
-                }
 
                 if (href.endsWith('.pdf')) {
                     event.preventDefault();
-                    const objectTag = document.createElement('object');
-                    objectTag.data = href;
-                    objectTag.type = 'application/pdf';
-                    objectTag.width = '100%';
-                    objectTag.height = '100%';
-                    contentFrame.insertAdjacentElement('afterend', objectTag);
-                    contentFrame.style.display = 'none';
+                    const googleDocsViewer = `https://docs.google.com/viewer?url=${encodeURIComponent(href)}&embedded=true`;
+                    contentFrame.src = googleDocsViewer;
+                    contentFrame.style.display = 'block';
                 } else {
                     contentFrame.style.display = 'block';
                     contentFrame.src = href;
