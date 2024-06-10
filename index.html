@@ -70,7 +70,7 @@
                 <section>
                     <h2>Papers</h2>
                     <ul>
-                        <li><a href="https://github.com/yahyaabdulmohsin/yahyaabdulmohsin.github.io/blob/1a7e5282ae25c6421dae4ccad7920f3ad22f746f/fundamental-theorem-of-calculus.pdf" target="content-frame" class="pdf-link">Paper 1</a></li>
+                        <li><a href="https://github.com/yahyaabdulmohsin/yahyaabdulmohsin.github.io/raw/1a7e5282ae25c6421dae4ccad7920f3ad22f746f/fundamental-theorem-of-calculus.pdf" target="content-frame" class="pdf-link">Paper 1</a></li>
                     </ul>
                 </section>
             </div>
@@ -87,14 +87,24 @@
             link.addEventListener('click', function(event) {
                 const contentFrame = document.getElementById('content-frame');
                 const href = this.getAttribute('href');
+                const existingObject = document.querySelector('object');
+
+                if (existingObject) {
+                    existingObject.remove();
+                }
 
                 if (href.endsWith('.pdf')) {
                     event.preventDefault();
-                    const objectTag = `<object data="${href}" type="application/pdf" width="100%" height="100%"></object>`;
-                    contentFrame.insertAdjacentHTML('afterend', objectTag);
+                    const objectTag = document.createElement('object');
+                    objectTag.data = href;
+                    objectTag.type = 'application/pdf';
+                    objectTag.width = '100%';
+                    objectTag.height = '100%';
+                    contentFrame.insertAdjacentElement('afterend', objectTag);
                     contentFrame.style.display = 'none';
                 } else {
                     contentFrame.style.display = 'block';
+                    contentFrame.src = href;
                 }
             });
         });
