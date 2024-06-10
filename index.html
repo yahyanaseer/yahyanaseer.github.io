@@ -5,29 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Special Links</title>
     <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <style>
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 200px;
+            border-right: 2px solid #000;
+        }
+        .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        iframe {
+            flex-grow: 1;
+            border: none;
+        }
+        .title-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
-    <div class="window" style="width: 300px;">
-        <div class="title-bar">
-            <div class="title-bar-text">My Special Links</div>
+    <div class="container">
+        <div class="sidebar window">
+            <div class="title-bar">
+                <div class="title-bar-text">Navigation</div>
+            </div>
+            <div class="window-body">
+                <section>
+                    <h2>GitHub Projects</h2>
+                    <ul>
+                        <li><a href="https://github.com/yourusername/project1" target="content-frame">Project 1</a></li>
+                        <li><a href="https://github.com/yourusername/project2" target="content-frame">Project 2</a></li>
+                        <li><a href="https://github.com/yourusername/project3" target="content-frame">Project 3</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Blog Posts</h2>
+                    <ul>
+                        <li><a href="https://yourblog.com/post1" target="content-frame">Blog Post 1</a></li>
+                        <li><a href="https://yourblog.com/post2" target="content-frame">Blog Post 2</a></li>
+                        <li><a href="https://yourblog.com/post3" target="content-frame">Blog Post 3</a></li>
+                    </ul>
+                </section>
+            </div>
         </div>
-        <div class="window-body">
-            <section>
-                <h2>GitHub Projects</h2>
-                <ul>
-                    <li><a href="https://github.com/yourusername/project1" target="_blank">Project 1</a></li>
-                    <li><a href="https://github.com/yourusername/project2" target="_blank">Project 2</a></li>
-                    <li><a href="https://github.com/yourusername/project3" target="_blank">Project 3</a></li>
-                </ul>
-            </section>
-            <section>
-                <h2>Blog Posts</h2>
-                <ul>
-                    <li><a href="https://yourblog.com/post1" target="_blank">Blog Post 1</a></li>
-                    <li><a href="https://yourblog.com/post2" target="_blank">Blog Post 2</a></li>
-                    <li><a href="https://yourblog.com/post3" target="_blank">Blog Post 3</a></li>
-                </ul>
-            </section>
+        <div class="content window">
+            <div class="title-bar">
+                <div class="title-bar-text">Content Viewer</div>
+            </div>
+            <iframe name="content-frame" src=""></iframe>
         </div>
     </div>
 </body>
