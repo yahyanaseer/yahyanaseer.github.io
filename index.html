@@ -46,6 +46,55 @@
                 flex-grow: 3;
             }
         }
+         /* Styling for the custom alert box */
+        #customAlert {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #customAlertContent {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        #customAlertContent h2 {
+            font-size: 1.5em;
+            margin: 0 0 10px;
+        }
+
+        #customAlertContent p {
+            font-size: 1em;
+            color: #333;
+            margin: 0 0 20px;
+        }
+
+        #customAlertContent button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #customAlertContent button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -84,6 +133,32 @@
             <iframe id="content-frame" name="content-frame" src=""></iframe>
         </div>
     </div>
+    <div id="customAlert">
+        <div id="customAlertContent">
+            <h2>Website Under Construction</h2>
+            <p>
+                Welcome! This website is currently a work in progress as of November 25th, 2024. 
+                I’m in the process of moving my projects, academic papers, and future blogs here. 
+                Take a look around if you’d like!
+            </p>
+            <button onclick="closeAlert()">Take a Look</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the custom alert
+        function showCustomAlert() {
+            document.getElementById('customAlert').style.display = 'flex';
+        }
+
+        // Function to close the custom alert
+        function closeAlert() {
+            document.getElementById('customAlert').style.display = 'none';
+        }
+
+        // Show the alert when the page loads
+        window.onload = showCustomAlert;
+    </script>
     <script>
         document.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', function(event) {
