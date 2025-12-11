@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Unit 2 Reflection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1116;
+      --card:#0f1720;
+      --muted:#9aa6b2;
+      --accent:#ffd166;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(255,209,102,0.04), transparent),
+                  radial-gradient(900px 400px at 90% 90%, rgba(96,165,250,0.03), transparent),
+                  var(--bg);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:48px 24px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:920px;
+      display:grid;
+      grid-template-columns:260px 1fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    /* sidebar */
+    .sidebar{
+      background:linear-gradient(180deg,var(--glass), rgba(255,255,255,0.02));
+      border-radius:var(--radius);
+      padding:22px;
+      backdrop-filter: blur(6px) saturate(120%);
+      border:1px solid rgba(255,255,255,0.03);
+      min-height:240px;
+    }
+    .logo{
+      font-family: 'Staatliches', cursive;
+      font-size:28px;
+      color:var(--accent);
+      letter-spacing:0.6px;
+      margin-bottom:12px;
+    }
+    .meta{color:var(--muted);font-size:13px;margin-bottom:18px}
+    nav a{display:block;color:#dbe9ff;text-decoration:none;padding:8px 0;border-radius:8px}
+    nav a:hover{color:var(--accent)}
+
+    /* main card */
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:18px;
+      padding:28px;
+      border:1px solid rgba(255,255,255,0.04);
+      box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+    }
+
+    h1{margin:0 0 6px 0;font-family:'Staatliches',cursive;font-size:34px}
+    .subtitle{color:var(--muted);margin-bottom:18px}
+
+    .post{
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+      padding:18px; border-radius:12px; border:1px dashed rgba(255,255,255,0.02);
+    }
+
+    .question{margin:16px 0 8px 0;font-weight:600}
+    p.answer{margin:0 0 12px 0;color:#dbe9ff;line-height:1.5}
+    .muted{color:var(--muted);font-size:13px}
+
+    .post-meta{display:flex;gap:12px;align-items:center;margin-top:16px}
+    .badge{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-size:13px}
+
+    footer{margin-top:22px;color:var(--muted);font-size:13px}
+
+    @media(max-width:820px){
+      .wrap{grid-template-columns:1fr;}
+      .sidebar{order:2}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <aside class="sidebar">
+      <div class="logo">yahya • portfolio</div>
+      <div class="meta">Personal reflection site.</div>
+      <nav>
+        <a href="#post">Unit 2 Reflection</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div style="height:18px"></div>
+      <div class="muted">y.n.abdulmohsin@gmail.com</div>
+    </aside>
+
+    <main class="card">
+      <header>
+        <h1>Unit 2 Reflection</h1>
+        <div class="subtitle">My response to the Option 2 prompt.</div>
+      </header>
+
+      <article id="post" class="post">
+        <div class="post-meta">
+          <div class="badge">Course: DTC-206</div>
+          <div class="muted">Posted: Sept 1, 2025</div>
+        </div>
+
+        <h2 class="question">Unit 2 Blog — Option 2: Bridging the Digital Divide</h2>
+        <p class="answer">
+          This week, I chose the second question: how we can bridge the Digital Divide within the United States. After exploring the groups and activities presented, it became clear that while progress is being made, large gaps still remain—especially in who enters and succeeds in STEM fields.  
+        </p>
+        <p class="answer">
+          One approach that felt genuinely effective was early exposure to coding and hands-on hardware for students in underserved communities. These programs don’t just teach technical skills; they also build confidence and show students that STEM careers are realistic options. In contrast, one-time workshops seemed less effective because they offered no long-term support or follow-through.
+        </p>
+        <p class="answer">
+          What many approaches seemed to miss was the need for sustained local infrastructure: reliable internet at home, access to mentors, long-term programs, and clear pathways into internships or community tech projects. Without these supports, the divide persists even when initial barriers are lowered.
+        </p>
+        <p class="answer">
+          To truly bridge the Digital Divide, we need continuous investment—from early education through early career opportunities—so that underrepresented groups can meaningfully participate in shaping the future of technology, not just using it.
+        </p>
+      </article>
+
+      <footer>
+        <div id="about"><strong>About this site</strong> — This is my portfolio (in the making).</div>
+        <div style="height:10px"></div>
+        <div id="contact" class="muted">Questions? Please email me.</div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
