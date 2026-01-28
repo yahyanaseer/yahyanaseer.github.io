@@ -97,3 +97,52 @@
         });
     });
 })();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("quoteForm");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); // stop page reload
+
+        // ---- Get active service type (Residential / Commercial)
+        const activeTypeBtn = document.querySelector(".seg__btn.is-active");
+        const type = activeTypeBtn ? activeTypeBtn.textContent.trim() : null;
+
+        // ---- Get form values
+        const name = form.querySelector('[name="name"]').value.trim();
+        const email = form.querySelector('[name="email"]').value.trim();
+        const phone = form.querySelector('[name="phone"]').value.trim();
+        const zip = form.querySelector('[name="zip"]').value.trim();
+
+        const smsOptIn = form.querySelectorAll('input[type="checkbox"]')[0].checked;
+        const emailOptIn = form.querySelectorAll('input[type="checkbox"]')[1].checked;
+
+        // ---- Now you have usable variables
+        console.log({
+            type,
+            name,
+            email,
+            phone,
+            zip,
+            smsOptIn,
+            emailOptIn
+        });
+
+        // Call your custom function
+        handleQuoteSubmission({
+            type,
+            name,
+            email,
+            phone,
+            zip,
+            smsOptIn,
+            emailOptIn
+        });
+    });
+});
+
+function handleQuoteSubmission(data) {
+    // Do whatever you want here (API call, save, analytics, etc.)
+    console.log("Submitting quote:", data);
+}
