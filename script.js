@@ -115,29 +115,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const phone = form.querySelector('[name="phone"]').value.trim();
         const zip = form.querySelector('[name="zip"]').value.trim();
 
-        const smsOptIn = form.querySelectorAll('input[type="checkbox"]')[0].checked;
-        const emailOptIn = form.querySelectorAll('input[type="checkbox"]')[1].checked;
-
-        // ---- Now you have usable variables
-        console.log({
-            type,
-            name,
-            email,
-            phone,
-            zip,
-            smsOptIn,
-            emailOptIn
-        });
-
         // Call your custom function
         handleQuoteSubmission({
             type,
             name,
             email,
             phone,
-            zip,
-            smsOptIn,
-            emailOptIn
+            zip
         });
     });
 });
